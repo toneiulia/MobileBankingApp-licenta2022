@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/transactions_info"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_home_card"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/filterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#004048CC"
+                android:text="filter"
+                android:textColor="@color/purple_700" />
+
+            <Button
+                android:id="@+id/btnExtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Extras de cont"
+                />
+
+            <Button
+                android:id="@+id/sortBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#004048CC"
+                android:text="sort"
+                android:textColor="@color/purple_700" />
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="Caută în acest cont"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
+        <LinearLayout
+            android:id="@+id/filterTabsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+<!--            <Button-->
+<!--                android:id="@+id/toateFiltrare"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="toate" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/facturiFiltrare"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="facturi" />-->
+<!--            <Button-->
+<!--                android:id="@+id/dataFiltrare"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="data" />-->
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                app:singleLine="true"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/toateFiltrare"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOATE"
+                    app:chipBackgroundColor="@color/chip_textcolor"
+                    app:chipIcon="@drawable/arrow"
+                    app:chipIconEnabled="true"
+                    app:chipIconTint="@color/chip_background"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/facturiFiltrare"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FACTURI"
+                    app:chipBackgroundColor="@color/chip_textcolor"
+                    app:chipIcon="@drawable/arrow"
+                    app:chipIconEnabled="true"
+                    app:chipIconTint="@color/chip_background"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/dataFiltrare"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DATA"
+                    app:chipBackgroundColor="@color/chip_textcolor"
+                    app:chipIcon="@drawable/arrow"
+                    app:chipIconEnabled="true"
+                    app:chipIconTint="@color/chip_background"/>
+
+                <!-- Chips can be declared here, or added dynamically. -->
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filterTabsLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterTabsLayout">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup1"
+                android:layout_width="match_parent"
+                app:singleLine="true"
+app:singleSelection="true"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/venituriFiltrare"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VENITURI"
+                    app:chipBackgroundColor="@color/chip_textcolor"
+                    app:chipIcon="@drawable/arrow"
+                    app:chipIconEnabled="true"
+                    app:chipIconTint="@color/chip_background"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/cheltuieliFiltrare"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHELTUIELI"
+                    app:chipBackgroundColor="@color/chip_textcolor"
+                    app:chipIcon="@drawable/arrow"
+                    app:chipIconEnabled="true"
+                    app:chipIconTint="@color/chip_background"/>
+
+                <!-- Chips can be declared here, or added dynamically. -->
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sortTabsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filterTabsLayout2">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/crescator"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CRESCATOR"
+                    android:textColor="#000"
+                    app:chipBackgroundColor="@color/chip_textcolor"
+                    app:chipIcon="@drawable/arrow"
+                    app:chipIconEnabled="true"
+
+
+                    app:chipIconTint="@color/chip_background" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/descrescator"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DESCRESCATOR"
+                    app:chipBackgroundColor="@color/chip_textcolor"
+                    app:chipIcon="@drawable/arrow"
+                    app:chipIconEnabled="true"
+                    app:chipIconTint="@color/chip_background" />
+
+                <!-- Chips can be declared here, or added dynamically. -->
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/transListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#0D2B89CD"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sortTabsLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/trans_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/menuprincipal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

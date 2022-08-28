@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".otpverification">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/imgview_otp_circle"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_introducereCod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Introdu codul trimis la"
+        android:textColor="#66000000"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_numarTelefon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#CC000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="+40734434359"/>
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/mcvaut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardBackgroundColor="#fff"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+<LinearLayout
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/optET1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back_dark_blue5_15"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/optET2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back_dark_blue5_15"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/optET3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back_dark_blue5_15"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/optET4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back_dark_blue5_15"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/optET5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back_dark_blue5_15"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/optET6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_back_dark_blue5_15"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_back_primary_15"
+        android:text="Continuă"
+        android:textColor="#FFF"
+        android:textAllCaps="false" />
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_primitCod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nu ai primit codul OTP?"/>
+
+        <TextView
+            android:id="@+id/tv_retrimite"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retrimite"
+            android:textColor="#089cd4"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!-- android:text => Sa ma gandesc ce text final pun-->
+    <!-- android:text => trebuie extract resource - dar in proiectul final-->
+    <!-- android:textColor => culorile puse in colors.xml-->
+    <!-- #66000000 => gri dragut pentru text -->
+
+    <!--
+    <com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="14dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    app:layout_constraintTop_toBottomOf="@+id/tv_numarTelefon"
+    app:layout_constraintStart_toStartOf ="parent"
+    app:layout_constraintEnd_toTopOf="@+id/tv_primitCod">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    https://material.io/components/cards/android#card
+
+    -->

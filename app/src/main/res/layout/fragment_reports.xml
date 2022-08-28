@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reports_info"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_home_card"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/grafic_general"
+            android:layout_width="123dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="General"
+            app:layout_constraintEnd_toStartOf="@+id/grafic_luna"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/grafic_luna"
+            android:layout_width="127dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="Alege luna"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/grafic_general"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/rellayout"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grafic_general">
+            <com.example.mobilebankinglicenta.CustomPieChart
+                android:id="@+id/pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/cheltuieliReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:text="Test"
+                    />
+                <TextView
+                    android:id="@+id/numarTranzactiiReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Test2"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/predictie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="-20dp"
+            app:layout_constraintStart_toStartOf="@+id/rellayout"
+            app:layout_constraintTop_toBottomOf="@+id/rellayout"
+            app:layout_constraintEnd_toEndOf="@+id/rellayout"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#0D2B89CD"
+            app:layout_constraintStart_toStartOf="@+id/predictie"
+            app:layout_constraintTop_toBottomOf="@+id/predictie"
+            app:layout_constraintEnd_toEndOf="@+id/predictie"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <ListView
+                android:id="@+id/lvcategorii"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="2dp"
+
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/reports_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="380dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/fundalimg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
