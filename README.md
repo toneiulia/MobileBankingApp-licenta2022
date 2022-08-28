@@ -10,10 +10,10 @@ Motivație -> Motivația alegerii temei este pasiunea către domeniul financiar-
 
 Scop -> Aplicația dezvoltată și implementată pentru această lucrare de licenţă a fost gândită în aşa fel încât să îndeplinească anumite nevoi tocmai cu scopul de a încuraja populația să adopte mai ușor digitalizarea bankingului.
 
-## Tehnologiile utilizate
-֍ Mediul de dezvoltare - Android Studio
-֍ Limbajul de programare – **Java**
-֍ Baza de date - Cloud Firestore
+## Tehnologiile utilizate <br />
+֍ Mediul de dezvoltare - **Android Studio** <br />
+֍ Limbajul de programare – **Java** <br />
+֍ Baza de date - **Cloud Firestore** <br />
 
 
 Aplicația este dezvoltată în limbajul *Java* cu ajutorul mediului de dezvoltare *Android Studio*, și este cuplată la o bază de date NoSQL, *Cloud Firestore*, care se actualizează concomitent cu acțiunile efectuate în cadrul aplicației. 
